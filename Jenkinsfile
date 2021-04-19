@@ -1,7 +1,7 @@
 node{
 
   def tomcatWeb = 'C:\\apache-tomcat-8.5.64\\webapps' 
-  def mvnHome = tool name : 'maven-1',  type : 'maven'
+  def mvnHome = tool name : 'maven-3',  type : 'maven'
   
   stage ('CheckOut') {
   	git 'https://github.com/jona987/webApp.git'
