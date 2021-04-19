@@ -18,7 +18,7 @@ node{
   }*/
   
   stage ("Deploy") {
-  	copy "target\\webApplication.war .\{tomcatWeb}\\webApplication.war"
+  	copy "target\\webApplication.war {tomcatWeb}\\webApplication.war"
   }
   
 }
