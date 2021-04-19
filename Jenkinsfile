@@ -8,17 +8,17 @@ node{
   }
   
   stage ('Build') {
-  	bat "{mvnHome}/bin/mvn package"
+  	bat "${mvnHome}/bin/mvn package"
   }
   
   /*stage ('Sonar Check') {
     withSonarQubeEnv('sonar-1'){
-    	bat "{mvnHome}/bin/mvn sonar:sonar"
+    	bat "${mvnHome}/bin/mvn sonar:sonar"
     }
   }*/
   
   stage ("Deploy") {
-  	copy "target\\webApplication.war {tomcatWeb}\\webApplication.war"
+  	copy "target\\webApplication.war ${tomcatWeb}\\webApplication.war"
   }
   
 }
